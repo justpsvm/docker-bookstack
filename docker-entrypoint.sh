@@ -78,6 +78,10 @@ if [ ! -f "$BOOKSTACK_HOME/.env" ]; then
       MAIL_PASSWORD=${MAIL_PASSWORD:-null}
       MAIL_ENCRYPTION=${MAIL_ENCRYPTION:-null}
       # URL used for social login redirects, NO TRAILING SLASH
+
+      #wkhtmltopdf
+      WKHTMLTOPDF=/usr/local/bin/wkhtmltopdf
+
 EOF
 sed -ie "s/single/errorlog/g" config/app.php
     else
